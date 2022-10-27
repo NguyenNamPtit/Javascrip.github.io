@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bai1
+        function bai1(arr,inputstring){
+            let nam =[];
+            for(let i =0;i<arr.length;i++){
+                let string = arr[i]; 
+                if( string.slice(0,1)===inputstring){
+                    nam.push(string);
+                }
+            }
+            return nam;
+        }
+        const ketquabai1 = bai1(["an","angry","cat"],"a");
+        console.log(ketquabai1);
+
+
+        //bai2
+        function bai2(inputstring,string){
+            let a=inputstring.toLowerCase();
+            let b=string.toLowerCase();
+            if(a===b){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        const ketquabai2 = bai2("hOrSe","HoRsE");
+        console.log(ketquabai2);
+
+        // bai3
+        function bai3(arr,inputstring){
+            let han=[];
+            for(let i =0;i<arr.length;i++){
+                let string = arr[i];
+                let a = string.toLowerCase(); 
+                if( a.slice(0,1)===inputstring){
+                    han.push(string);
+                }
+            }
+            return han;
+        }
+        const ketquabai3 = bai3(["An","angry","cat"],"a");
+        console.log(ketquabai3);
+        
+        //bai4
+        function bai4(inputString) {
+            const arr = inputString.split(" ")
+            const result = []
+            result.push(arr[0].charAt(0).toLowerCase() + arr[0].slice(1))
+            for(let i = 1; i < arr.length; i++) {
+                result.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1))
+            }
+            return result.join("")
+        }
+        const ketquabai4 = bai4("An angrcy cat");
+        console.log(ketquabai4);
+
+        //bai5
+        function bai5(Number){
+            if(Number<=0){
+                return false;
+            }else if(Number>0&&Number<10){
+                if(Number===1){
+                    return Number+"st";
+                }else if(Number===2){
+                    return Number+"nd";
+                }else if(Number===3){
+                    return Number+"rd";
+                }else{
+                    return Number+"th";
+                }
+            }else{
+                let a = Number%10;
+                if(a===1){
+                    return Number+"st";
+                }else if(a===2){
+                    return Number+"nd";
+                }else if(a===3){
+                    return Number+"rd";
+                }else{
+                    return Number+"th";
+                }
+            }
+        }
+        const ketquabai5 = bai5(3);
+        console.log(ketquabai5);
+
+        // bai6
+        function bai6(String,Number){
+            const StringLength =String.length;
+            if(StringLength > Number){
+                let a = String.slice(0,Number);
+                let b = "...";
+                return a + b;
+            }else{
+                return String;
+            }
+        }
+        const ketquabai6 = bai6("This is a long message",16);
+        console.log(ketquabai6);
+    </script>
+</body>
+</html>
